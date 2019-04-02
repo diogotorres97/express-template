@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  template-server:
+    image: template-server
+    command: npm run dev
+    build: server
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: template-server
+    ports:
+      - 3000:3000
+    environment:
+      ENVIRONMENT: development
+    depends_on:
+      - template-psqldb
+
+  template-psqldb:
+    image: postgres:11-alpine
+    container_name: psqldb
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=template
+
+  template-pgadmin:
+    image: thajeztah/pgadmin4
+    container_name: template-pgadmin
+    ports:
+      - 5050:5050
+    depends_on:
+      - template-psqldb
