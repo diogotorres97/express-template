@@ -45,7 +45,7 @@ Access to:
 
 ### How to run the linters
 **Folder:** server
-- `docker-compose run gdpr-server sh`
+- `docker-compose run template-server sh`
 - Run linter: `npm run lint` 
 - Fix errors on linter automatically: `npm run lint:fix` 
 

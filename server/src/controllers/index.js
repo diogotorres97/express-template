@@ -1,9 +1,7 @@
-'use strict';
-
 const todoController = require('./todos');
 const todoItemsController = require('./todoitems');
 
 module.exports = {
-    todoController,
-    todoItemsController,
+  todoController,
+  todoItemsController,
 };
