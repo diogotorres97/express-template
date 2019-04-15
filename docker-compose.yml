@@ -18,7 +18,7 @@ services:
 
   template-psqldb:
     image: postgres:11-alpine
-    container_name: psqldb
+    container_name: template-psqldb
     ports:
       - 5432:5432
     environment:

@@ -40,9 +40,15 @@ Access to:
 
 
 ### How to run the tests
+ - `sh test.sh`
 
 
 ### How to run the linters
+**Folder:** server
+- `docker-compose run gdpr-server sh`
+- Run linter: `npm run lint` 
+- Fix errors on linter automatically: `npm run lint:fix` 
+
 
 ### Repository structure (Edit Later)
 

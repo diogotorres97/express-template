@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  template-server-test:
+    image: template-server
+    command: npm run test
+    build: server
+    volumes:
+      - ./server:/usr/src/app
+      - /usr/src/app/node_modules
+    container_name: template-server-test
+    environment:
+      NODE_ENV: test
+    depends_on:
+      - template-psqldb-test
+
+  template-psqldb-test:
+    image: postgres:11-alpine
+    container_name: template-psqldb-test
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=template-test
