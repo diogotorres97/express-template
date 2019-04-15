@@ -1,4 +1,4 @@
-# ExpresJS Template
+# ExpressJS Template
 
 ## Product View
 
