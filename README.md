@@ -14,9 +14,9 @@ Expressjs + Passportjs + JWT + Postgres + Pgadmin + Docker
 
 
 ### Cloning Project
-```
-
-
+```shell
+$ git clone https://github.com/diogotorres97/expressjs-template
+$ cd expressjs-template
 ```
 
 ### Installing Docker and Docker Compose
@@ -30,8 +30,8 @@ Note: If you are getting permission error one the docker run hello-world or if y
 
 __To start the environment__ :
 
-```
-docker-compose up
+```shell
+$ docker-compose up
 ```
 
 Access to:
@@ -40,14 +40,19 @@ Access to:
 
 
 ### How to run the tests
- - `sh test.sh`
+  ```shell
+   $ chmod +x test.sh # set executable permissions
+   $ sh test.sh
+   ```
 
 
-### How to run the linters
-**Folder:** server
-- `docker-compose run template-server sh`
-- Run linter: `npm run lint` 
-- Fix errors on linter automatically: `npm run lint:fix` 
+### How to run the linter
+```shell
+$ cd server
+$ docker-compose run template-server sh
+$ npm run lint # run linter
+$ npm run lint:fix # run linter and fix errors
+```
 
 
 ### Repository structure (Edit Later)
