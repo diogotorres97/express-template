@@ -14,9 +14,6 @@ router.use('/api/', auth);
 router.use('/api/', passport.authenticate('jwt', { session: false }));
 router.use('/api/', todos);
 router.use('/api/', todoItems);
-router.get('/api', (req, res) => res.status(200).send({
-  message: 'Welcome to the Todos API!',
-}));
 
 
 module.exports = router;

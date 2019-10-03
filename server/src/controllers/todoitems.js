@@ -24,7 +24,7 @@ const update = async (id, todoId, content, complete) => {
 };
 
 const destroy = async (id, todoId) => {
-  const todoItem = await TodoItem.find({
+  const todoItem = await TodoItem.findOne({
     where: {
       id,
       todoId,
