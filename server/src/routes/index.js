@@ -10,7 +10,7 @@ const todos = require('./todos');
 const todoItems = require('./todoItems');
 
 
-router.use('/', auth);
+router.use('/api/', auth);
 router.use('/api/', passport.authenticate('jwt', { session: false }));
 router.use('/api/', todos);
 router.use('/api/', todoItems);

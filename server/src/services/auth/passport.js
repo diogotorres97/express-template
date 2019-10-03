@@ -1,8 +1,8 @@
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy;
 const { Strategy, ExtractJwt } = require('passport-jwt');
-const { User } = require('../models');
-const { JWT_SECRET } = require('../config/configs');
+const { User } = require('../../models');
+const { JWT_SECRET } = require('../../config/configs');
 
 passport.use('signup', new LocalStrategy({
   usernameField: 'email',
@@ -39,7 +39,7 @@ passport.use('login', new LocalStrategy({
     if (!validate) {
       return done(null, false, { message: 'Wrong Password' });
     }
-    return done(null, user); // TODO: Not retrieve user bc password
+    return done(null, user);
   } catch (error) {
     return done(error);
   }
