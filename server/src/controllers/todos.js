@@ -1,6 +1,6 @@
 const { Todo, TodoItem } = require('../models');
 
-const create = async title => Todo.create({
+const create = async (title) => Todo.create({
   title,
 });
 
@@ -10,7 +10,7 @@ const list = async () => Todo.findAll({
   }],
 });
 
-const retrieve = async todoId => Todo.findByPk(todoId, {
+const retrieve = async (todoId) => Todo.findByPk(todoId, {
   include: [{
     model: TodoItem,
   }],
