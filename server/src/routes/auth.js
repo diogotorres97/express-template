@@ -11,10 +11,19 @@ router.post('/signup', async (req, res) => {
     }
 
     if (!user) return res.status(400).send();
+    /* eslint-disable */
+    delete user.dataValues.password;
+    delete user._previousDataValues.password;
+    /* eslint-enable */
+    return req.login(user, { session: false }, async () => {
+      const body = { id: user.id, email: user.email };
+      const token = jwt.sign({ user: body }, JWT_SECRET);
 
-    return res.json({
-      message: 'Signup successful',
-      user,
+      return res.json({
+        message: 'Signup successful',
+        user,
+        token,
+      });
     });
   })(req, res);
 });

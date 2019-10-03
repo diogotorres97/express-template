@@ -7,14 +7,12 @@ const create = async title => Todo.create({
 const list = async () => Todo.findAll({
   include: [{
     model: TodoItem,
-    as: 'todoItems',
   }],
 });
 
 const retrieve = async todoId => Todo.findByPk(todoId, {
   include: [{
     model: TodoItem,
-    as: 'todoItems',
   }],
 });
 
@@ -22,7 +20,6 @@ const update = async (todoId, title) => {
   const todo = await Todo.findByPk(todoId, {
     include: [{
       model: TodoItem,
-      as: 'todoItems',
     }],
   });
 
