@@ -2,14 +2,12 @@
 
 | INDEX |
 |:-:|
-| [Project Architecture Overview](#Project-Architecture-Overview) |
 | [Setup Project](#Setup-Project) |
+| [Project Architecture Overview](#Project-Architecture-Overview) |
 
 ## Product View
 
 Expressjs + Passportjs + JWT + Postgres + Pgadmin + Docker
-
-## Project Architecture Overview
 
 ## Setup Project
 
@@ -67,10 +65,44 @@ $ npm run lint # run linter
 $ npm run lint:fix # run linter and fix errors
 ```
 
+## Project Architecture Overview
 
-### Repository structure (Edit Later)
+### Repository structure
 
 ```
 express-template/
-+--server
++-- server
+|   +-- src
+|   |   +-- config
+|   |   +-- controllers
+|   |   +-- migrations
+|   |   +-- models
+|   |   +-- routes
+|   |   +-- seeders
+|   |   +-- services
+|   |   +-- test
+|   |   +-- utils
+|   +-- Dockerfile
+|   +-- package.json
 ```
+
+### Main Sections Overview
+
+| Section | Description | 
+|:-:|:-|
+| __Config__ | Definition of global variables independent to the application's context. Relevant for the setup of _CI / CD_.  |
+| __Models__ | The models defined through _ORM_, hence representing the database schema.  |
+| __Controllers__ | Handlers responsible for the manipulation of the respective Models. |
+| __Migrations__ | Migrations are like version control for your database, allowing your team to easily modify and share the application's database schema. |
+| __Routes__ | Where the mapping between the Controllers' functions and the actual URL endpoints are made. |
+| __Seeders__ | Definition of an initial set of values used to populate the database. |
+| __Services__ | Additional services such as _OAuth_, email integration, websockets, among others. |
+| __Test__ | Definition of a set of files with the purpose of verifying that our server is working as it is supposed to. |
+| __Utils__ | Definition of a set of utility functions that can be used across all afore-mentioned sections |
+
+Other important files:
+
+| File | Description |
+|:-:|:-|
+| __Dockerfile__| Text document that contains all the commands a user could call on the command line to assemble a docker image. |
+| __package.json__ | _JSON_ document that describes the behavior of the related npm-package. Defines some standard information regarding it, as well as useful scripts. |
