@@ -1,5 +1,10 @@
 # ExpressJS Template
 
+| INDEX |
+|:-:|
+| [Project Architecture Overview](#Project-Architecture-Overview) |
+| [Setup Project](#Setup-Project) |
+
 ## Product View
 
 Expressjs + Passportjs + JWT + Postgres + Pgadmin + Docker
@@ -35,8 +40,16 @@ $ docker-compose up
 ```
 
 Access to:
-- http://localhost:3000 -> to access the server
-- http://localhost:5050 -> to access pgadming to interact with database
+- `http://localhost:3000` -> to access the server
+- `http://localhost:5050` -> to access pgadmin to interact with database
+
+### Handling pgadmin
+
+Notice that there is not yet a server created, so when you access the pgadmin interface you must create a new one. When doing so, do not forget to consult the docker-compose file (`docker-compose.yml`). To ease your creation of the server, the example below is given:
+
+![Example server creation](https://i.imgur.com/zeK6HfM.png)  
+
+To access the your server schemas navigate to `Servers/<server-name>/Databases/<Maintenance-database-name>/Schemas/public/Tables`.
 
 
 ### How to run the tests
