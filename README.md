@@ -1,12 +1,16 @@
-# ExpressJS Template
+# express-template
 
-| INDEX |
-|:-:|
-| [Setup Project](#Setup-Project) |
-| [Project Architecture Overview](#Project-Architecture-Overview) |
+An opinionated template for an [Express](https://expressjs.com) based project, featuring a standardized structure, containerization, authentication, ORM, development utilities, etc.
 
-## Product View
+## Getting Started
 
+- [Features](#features)
+- [Setup Project](#setup-project)
+- [Architecture Overview](#architecture-overview)
+
+## Features
+
+[I WOULD REWRITE THIS]
 Expressjs + Passportjs + JWT + Postgres + Pgadmin + Docker
 
 ## Setup Project
@@ -65,7 +69,7 @@ $ npm run lint # run linter
 $ npm run lint:fix # run linter and fix errors
 ```
 
-## Project Architecture Overview
+## Architecture Overview
 
 ### Repository structure
 
