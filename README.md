@@ -71,17 +71,17 @@ $ npm run lint:fix # run linter and fix errors
 
 ```
 express-template/
-+-- server
-|   +-- src
-|   |   +-- config
-|   |   +-- controllers
-|   |   +-- migrations
-|   |   +-- models
-|   |   +-- routes
-|   |   +-- seeders
-|   |   +-- services
-|   |   +-- test
-|   |   +-- utils
+\-- server
+|   \-- src
+|   |   \-- config
+|   |   \-- controllers
+|   |   \-- migrations
+|   |   \-- models
+|   |   \-- routes
+|   |   \-- seeders
+|   |   \-- services
+|   |   \-- test
+|   |   \-- utils
 |   +-- Dockerfile
 |   +-- package.json
 ```
@@ -106,3 +106,11 @@ Other important files:
 |:-:|:-|
 | __Dockerfile__| Text document that contains all the commands a user could call on the command line to assemble a docker image. |
 | __package.json__ | _JSON_ document that describes the behavior of the related npm-package. Defines some standard information regarding it, as well as useful scripts. |
+
+### Detailed View of Important Sections
+
+#### Models
+
+This template uses [__Sequelize__](https://sequelize.org), promise-based ORM for Node.js. It supports the dialects PostgreSQL, MySQL, MariaDB, SQLite, and MSSQL and features solid transaction support, relations, read replication and more. In this case, we use it with PostgreSQL.
+
+When trying to define your models, it might be useful to check some of the Sequelize documentation, such as the [Datatypes](https://sequelize.org/v5/manual/data-types.html) or the [Associations](https://sequelize.org/v5/manual/associations.html).
