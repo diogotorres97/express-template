@@ -49,11 +49,11 @@ Access to:
 
 ### Setup pgAdmin
 
-Notice that there is not yet a server created, so when you access the pgadmin interface you must create a new one. When doing so, do not forget to consult the docker-compose file (`docker-compose.yml`). To ease your creation of the server, the example below is given:
+Notice that there is not yet a server created, so when you access the pgadmin interface you must create a new one. When doing so, consult the docker-compose file (`docker-compose.yml`) to see the database configuration. To ease your creation of the server, the example below is given:
 
 <img src="https://i.imgur.com/zeK6HfM.png" width="400" height="400">
 
-To access the your server schemas navigate to `Servers/<server-name>/Databases/<Maintenance-database-name>/Schemas/public/Tables`.
+To access your server schemas navigate to `Servers/<server-name>/Databases/<Maintenance-database-name>/Schemas/public/Tables`.
 
 
 ### How to run the tests
