@@ -18,7 +18,9 @@ Expressjs + Passportjs + JWT + Postgres + Pgadmin + Docker
 * [Cloning Project](#cloning-project)
 * [Installing Docker and Docker Compose](#installing-docker-and-docker-compose)
 * [Configured containers](#configured-containers)
-
+* [setup pgAdmin](#setup-pgadmin)
+* [How to run the tests](#how-to-run-the-tests)
+* [How to run the linter](#how-to-run-the-linter)
 
 ### Cloning Project
 ```shell
