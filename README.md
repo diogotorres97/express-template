@@ -18,7 +18,7 @@ Expressjs + Passportjs + JWT + Postgres + Pgadmin + Docker
 * [Cloning Project](#cloning-project)
 * [Installing Docker and Docker Compose](#installing-docker-and-docker-compose)
 * [Configured containers](#configured-containers)
-* [setup pgAdmin](#setup-pgadmin)
+* [Setup pgAdmin](#setup-pgadmin)
 * [How to run the tests](#how-to-run-the-tests)
 * [How to run the linter](#how-to-run-the-linter)
 
@@ -47,7 +47,7 @@ Access to:
 - `http://localhost:3000` -> to access the server
 - `http://localhost:5050` -> to access pgadmin to interact with database
 
-### Handling pgadmin
+### Setup pgAdmin
 
 Notice that there is not yet a server created, so when you access the pgadmin interface you must create a new one. When doing so, do not forget to consult the docker-compose file (`docker-compose.yml`). To ease your creation of the server, the example below is given:
 
