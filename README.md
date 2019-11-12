@@ -10,8 +10,29 @@ An opinionated template for an [Express](https://expressjs.com) based project, f
 
 ## Features
 
-[I WOULD REWRITE THIS]
-Expressjs + Passportjs + JWT + Postgres + Pgadmin + Docker
+### Main Features
+- REST API template Web Application
+  - [Express](https://expressjs.com/) - Express is a minimal and flexible Node.js web application framework that provides a robust set of features to develop an api.
+- JWT Authentication
+  - [Passport](http://www.passportjs.org/) - Passport is authentication middleware for Node.js. Easy to integrate in an Express-based web application.
+- Database Connection w/ [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) and GUI 
+  - [PostgreSQL](https://www.postgresql.org/) - PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
+  - [Sequelize](https://sequelize.org/) - Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading, read replication and more.
+  - [pgAdmin](https://www.pgadmin.org/) - pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL.
+- Containerization
+  - [Docker](Docker) - Docker containers wrap up software and its dependencies into a standardized unit for software development that includes everything it needs to run: code, runtime, system tools and libraries.
+  - [[Docker] Compose] - Compose is a tool for defining and running multi-container Docker applications. We use Compose to run a Web Application, the postgreSQL database and the pgadmin instance to interact with the database.
+
+### Development Features
+
+- Unit Tests Template w/ Coverage
+  - [Chai](https://www.chaijs.com/) - Chai is a BDD/TDD assertion library for Node.js and the browser that can be paired with any Javascript testing framework. We use the [Should](https://www.chaijs.com/guide/styles/#should) style.
+  - [Mocha](https://mochajs.org/) - Mocha is a JavaScript test framework running on Node.js and in the browser, making asynchronous simple. 
+  - [nyc(Instabul's cli-client)](https://istanbul.js.org/) - Istanbul is a test coveerage tool for ES5 and ES2015+ Javascript.
+- Linting
+  - [ESLint](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. We enformce the [Airbnb] style.
+- Hot Reloading
+  - [nodemon](https://nodemon.io/) - Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
 
 ## Setup Project
 
