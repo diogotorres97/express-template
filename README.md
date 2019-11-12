@@ -21,7 +21,7 @@ An opinionated template for an [Express](https://expressjs.com) based project, f
   - [pgAdmin](https://www.pgadmin.org/) - pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL.
 - Containerization
   - [Docker](Docker) - Docker containers wrap up software and its dependencies into a standardized unit for software development that includes everything it needs to run: code, runtime, system tools and libraries.
-  - [[Docker] Compose] - Compose is a tool for defining and running multi-container Docker applications. We use Compose to run a Web Application, the postgreSQL database and the pgadmin instance to interact with the database.
+  - [(Docker) Compose](https://docs.docker.com/compose/) - Compose is a tool for defining and running multi-container Docker applications. We use Compose to run a Web Application, the postgreSQL database and the pgadmin instance to interact with the database.
 
 ### Development Features
 
@@ -37,11 +37,11 @@ An opinionated template for an [Express](https://expressjs.com) based project, f
 ## Setup Project
 
 * [Cloning Project](#cloning-project)
-* [Installing Docker and Docker Compose](#installing-docker-and-docker-compose)
-* [Configured containers](#configured-containers)
+* [Prerequisites](#prerequisites)
+* [Run Containers](#run-containers)
 * [Setup pgAdmin](#setup-pgadmin)
-* [How to run the tests](#how-to-run-the-tests)
-* [How to run the linter](#how-to-run-the-linter)
+* [Running Tests](#running-tests)
+* [Running Linter](#running-linter)
 
 ### Cloning Project
 ```shell
@@ -49,42 +49,52 @@ $ git clone https://github.com/diogotorres97/expressjs-template
 $ cd expressjs-template
 ```
 
-### Installing Docker and Docker Compose
+### Prerequisites
 
-Before starting you'll need to have __Docker__ and __Docker Compose__ installed on your PC.
-The official instructions are in [Install Docker](https://docs.docker.com/install/) and in [Install Docker Compose](https://docs.docker.com/compose/install/#install-compose).
+To use the template, you need the following software installed (official instructions linked):
+- [Docker](https://docs.docker.com/install/)
+- [(Docker) Compose](https://docs.docker.com/compose/install/#install-compose)
 
-Note: If you are getting permission error one the docker run hello-world or if you get a warning ".docker/config.json: permission denied run..." follow [this instructions](https://docs.docker.com/install/linux/linux-postinstall/).
 
-### Configured containers
+**Note:** If you're using Linux, you might enconter permission errors while installing Docker. Try [this](https://docs.docker.com/install/linux/linux-postinstall/).
 
-__To start the environment__ :
+### Run Containers
+
+Inside the repository's main directory, run:
 
 ```shell
 $ docker-compose up
 ```
 
-Access to:
-- `http://localhost:3000` -> to access the server
-- `http://localhost:5050` -> to access pgadmin to interact with database
+You should now be able to access:
+- http://localhost:3000 - REST API instance
+- http://localhost:5050 - pgAdmin instance
 
 ### Setup pgAdmin
 
-Notice that there is not yet a server created, so when you access the pgadmin interface you must create a new one. When doing so, consult the docker-compose file (`docker-compose.yml`) to see the database configuration. To ease your creation of the server, the example below is given:
+When you access the pgAdmin instance for the first time, there will be no server connection. You must create one. When doing so, consult the docker-compose file (`docker-compose.yml`) to check the database configuration. An example connection creation:
 
-<img src="https://i.imgur.com/zeK6HfM.png" width="400" height="400">
+<img src="https://i.imgur.com/zeK6HfM.png" width="400" height="400" alt="
+A pgAdmin connection creation form, with the following fields and values:
+Host name/address: template-psqldb, 
+Port: 5432,
+Maintenance database: template,
+Username: user,
+Password: *hidden*,
+Save password: *checked*,
+">
 
-To access your server schemas navigate to `Servers/<server-name>/Databases/<Maintenance-database-name>/Schemas/public/Tables`.
+**Tip:** In pgAdmin, you can find the server's schemas at `Servers/<server-name>/Databases/<Maintenance-database-name>/Schemas/public/Tables`.
 
 
-### How to run the tests
+### Running Tests
   ```shell
    $ chmod +x test.sh # set executable permissions
    $ sh test.sh
    ```
 
 
-### How to run the linter
+### Running Tests
 ```shell
 $ cd server
 $ docker-compose run template-server sh
