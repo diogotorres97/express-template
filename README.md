@@ -45,8 +45,8 @@ An opinionated template for an [Express](https://expressjs.com) based project, f
 
 ### Cloning Project
 ```shell
-$ git clone https://github.com/diogotorres97/expressjs-template
-$ cd expressjs-template
+$ git clone https://github.com/diogotorres97/express-template
+$ cd express-template
 ```
 
 ### Prerequisites
