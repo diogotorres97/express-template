@@ -13,24 +13,24 @@ An opinionated template for an [Express](https://expressjs.com) based project, f
 ### Main Features
 - REST API template Web Application
   - [Express](https://expressjs.com/) - Express is a minimal and flexible Node.js web application framework that provides a robust set of features to develop an api.
-- JWT Authentication
+- [JWT](http://www.passportjs.org/packages/passport-jwt) Authentication
   - [Passport](http://www.passportjs.org/) - Passport is authentication middleware for Node.js. Easy to integrate in an Express-based web application.
 - Database Connection w/ [ORM](https://en.wikipedia.org/wiki/Object-relational_mapping) and GUI 
   - [PostgreSQL](https://www.postgresql.org/) - PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.
   - [Sequelize](https://sequelize.org/) - Sequelize is a promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server. It features solid transaction support, relations, eager and lazy loading, read replication and more.
   - [pgAdmin](https://www.pgadmin.org/) - pgAdmin is the most popular and feature rich Open Source administration and development platform for PostgreSQL.
 - Containerization
-  - [Docker](Docker) - Docker containers wrap up software and its dependencies into a standardized unit for software development that includes everything it needs to run: code, runtime, system tools and libraries.
-  - [(Docker) Compose](https://docs.docker.com/compose/) - Compose is a tool for defining and running multi-container Docker applications. We use Compose to run a Web Application, the postgreSQL database and the pgadmin instance to interact with the database.
+  - [Docker](https://www.docker.com/) - Docker containers wrap up software and its dependencies into a standardized unit for software development that includes everything it needs to run: code, runtime, system tools and libraries.
+  - [(Docker) Compose](https://docs.docker.com/compose/) - Compose is a tool for defining and running multi-container Docker applications. We use Compose to run a Web Application, the postgreSQL database and the pgAdmin instance to interact with the database.
 
 ### Development Features
 
 - Unit Tests Template w/ Coverage
   - [Chai](https://www.chaijs.com/) - Chai is a BDD/TDD assertion library for Node.js and the browser that can be paired with any Javascript testing framework. We use the [Should](https://www.chaijs.com/guide/styles/#should) style.
   - [Mocha](https://mochajs.org/) - Mocha is a JavaScript test framework running on Node.js and in the browser, making asynchronous simple. 
-  - [nyc(Instabul's cli-client)](https://istanbul.js.org/) - Istanbul is a test coveerage tool for ES5 and ES2015+ Javascript.
+  - [nyc(Instabul's cli-client)](https://istanbul.js.org/) - Istanbul is a test coverage tool for ES5 and ES2015+ Javascript.
 - Linting
-  - [ESLint](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. We enformce the [Airbnb] style.
+  - [ESLint](https://eslint.org/) - Tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. We enforce the [Airbnb](https://github.com/airbnb/javascript) style.
 - Hot Reloading
   - [nodemon](https://nodemon.io/) - Nodemon is a utility that will monitor for any changes in your source and automatically restart your server.
 
@@ -94,7 +94,7 @@ Save password: *checked*,
    ```
 
 
-### Running Tests
+### Running Linter
 ```shell
 $ cd server
 $ docker-compose run template-server sh
@@ -141,8 +141,8 @@ Other important files:
 
 | File | Description |
 |:-:|:-|
-| __Dockerfile__| Text document that contains all the commands a user could call on the command line to assemble a docker image. |
-| __package.json__ | _JSON_ document that describes the behavior of the related npm-package. Defines some standard information regarding it, as well as useful scripts. |
+| __Dockerfile__| Text document that contains all the commands used to support the express framework. It's based on `node:11-alpine` and has some dependencies installed to support the `bcrypt` package. |
+| __package.json__ | _JSON_ document that describes the behavior of the related npm-package. Defines some useful scripts used in this template but also the dependencies installed as well as their version. |
 
 ### Detailed View of Important Sections
 
