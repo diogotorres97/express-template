@@ -15,7 +15,7 @@ services:
       - template-psqldb-test
 
   template-psqldb-test:
-    image: postgres:11-alpine
+    image: postgres:12-alpine
     container_name: template-psqldb-test
     environment:
       - POSTGRES_USER=user

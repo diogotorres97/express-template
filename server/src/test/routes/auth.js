@@ -27,7 +27,7 @@ describe('Auth', () => {
         .post('/api/signup')
         .send({
           email: 'test@test.pt',
-          password: '12345'
+          password: '12345',
         })
         .end((_, res) => {
           res.should.have.status(200);
@@ -42,7 +42,7 @@ describe('Auth', () => {
         .post('/api/signup')
         .send({
           email: 'test@test.pt',
-          password: '12345'
+          password: '12345',
         })
         .end((_, res) => {
           res.should.have.status(400);
@@ -55,7 +55,7 @@ describe('Auth', () => {
       chai.request(server)
         .post('/api/signup')
         .send({
-          email: 'test3@test.pt'
+          email: 'test3@test.pt',
         })
         .end((_, res) => {
           res.should.have.status(400);

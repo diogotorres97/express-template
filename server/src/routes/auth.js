@@ -3,7 +3,6 @@ const jwt = require('jsonwebtoken');
 const passport = require('passport');
 const { JWT_SECRET } = require('../config/configs');
 
-
 router.post('/signup', async (req, res) => {
   passport.authenticate('signup', { session: false }, async (err, user, info) => {
     if (!user && info) {
