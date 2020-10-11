@@ -29,7 +29,6 @@ const initializeTodoItems = async () => {
   ]);
 };
 
-
 const initializeDatabase = async () => {
   await initializeUsers();
   await initializeTodos();
